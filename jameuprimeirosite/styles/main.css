@@ -1,0 +1,247 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header{
+    background-color: black;
+    color: white;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+  
+}
+
+#navmenu,
+#navmenu ul,
+#navmenu li{
+   
+    padding-right: 2px;
+    z-index: 10;
+    margin-right: 20px;
+}
+
+#navmenu ul{
+    line-height: 30px;
+}
+
+#flutuar li{
+    line-height: 30px;
+    float: left;
+}
+
+#navmenu li{
+    list-style: none;
+    float: right;
+    position: relative;
+    background-color: crimson;
+}
+
+#navmenu ul li a{
+    text-align: center;
+    font-family: "Palatino Linotype", "Book Antiqua", palatino , serif;
+    text-decoration: none;
+    height: 30px;
+    width: 150px;
+    display: block;
+    color: #000000;
+    border: 1px solid #000;
+   
+    
+}
+
+#navmenu ul ul{
+    position: absolute;
+    visibility: hidden;
+    top: 32px;
+    
+}
+
+#navmenu ul li:hover ul{
+    visibility: visible;
+    
+}
+
+#navmenu li:hover{
+    background-color:palevioletred;
+    font-weight: bold;
+}
+
+#navmenu ul li:hover li a:hover{
+    background-color: skyblue;
+    color: purple;
+}
+
+.container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.container .slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 100%;
+    animation: animate 20s linear infinite;
+}
+
+.container .slider .slide{
+    position: relative;
+    width: 20%;
+    height: 100%;
+    float: left;
+    
+}
+
+.container .slider .slide .caption{
+    position: absolute;
+    bottom: 60px;
+    left: 60px;
+    right: 60px;
+    padding: 30px;
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.container .slider .slide .caption h2{
+    margin: 0 0 28px;
+    padding: 0;
+    color: #fff;
+    font-size: 48px;
+    transition: 0.5s;
+}
+
+.container .slider .slide .caption p{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.container .slider .slide.slide1{
+   background: url(/images/mulheres.jpg);
+   background-size:  cover;
+   background-position: center;
+    
+}
+
+.container .slider .slide.slide2{
+    background: url(/images/mulheres2.jpg);
+    background-size: cover;
+    background-position: center;
+     
+ }
+
+ .container .slider .slide.slide3{
+    background: url(/images/mulher1.jpg);
+    background-size: cover;
+    background-position: center;
+     
+ }
+
+ .container .slider .slide.slide4{
+    background: url(/images/mulher2.jpg);
+    background-size: cover;
+    background-position: center;
+     
+ }
+
+section{
+    padding: 20px;
+    margin: 0;
+}
+
+.simbolos-explicacao{
+    width: 51px;
+    padding: 5%;
+    margin: 2;
+    float: left;
+    position: relative;
+}
+
+.coluna {
+    float: left;
+    padding: 0 5%;
+    position: relative;
+}
+
+div{
+    display: block;
+}
+
+.duas{
+    width: 40%;
+}
+
+.uma{
+    width: 60%;
+    margin: 10 20;
+}
+
+.justificado{
+    text-align: justify ;
+}
+
+.conceitos{
+    background-color:gray;
+    padding: 0;
+    margin:0;
+}
+
+ @keyframes animate{
+     0%{
+         left: 0;
+     }
+
+     20%{
+        left: 0;
+    }
+
+    25%{
+        left: -100%;
+    }
+
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+ }
+
+ @media(max-width: 768px){
+    .container .slider .slide .caption{
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        padding: 20px;
+    }
+    
+    .container .slider .slide .caption h2{
+        margin: 0 0 10px;
+        font-size: 30px;
+    }
+
+    .container .slider .slide .caption p{
+        font-size:16px;
+    }
+ }
